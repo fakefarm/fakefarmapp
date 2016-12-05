@@ -6,12 +6,18 @@
   <section class='content'>
     <div class='handles'>
       <ul>
-        <li class='handle github'><a href='#'>github</a></li>
+        <% @networks.each do |network| %>
+          <li class="handle <%= network.handle %>">
+            <%= link_to network.handle, "http://www." + network.url, target: '_blank' %>
+          </li>
+        <% end %>
       </ul>
     </div>
     <div class='network'>
-      <h2 data-handle='title' class='handle-title'>github</h2>
-      <p class='desc' data-desc='body'>this is a great day to be alive. For those of you who know github, then feel free to read how I'm going to explain it to non-developers. Github is like facebook for coders. This is where I keep public code.</p>
+      <% @networks.each do |network| %>
+        <h2 data-handle='title' class='handle-title'><%= network.handle %></h2>
+        <p class='bio' data-bio="<%= network.handle%>"><%= network.bio %></p>
+    <% end %>
     </div>
   </section>
 </div>
