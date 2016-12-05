@@ -13,7 +13,7 @@
         <% end %>
       </ul>
     </div>
-    <div class='network'>
+    <div class='network hidden'>
       <% @networks.each do |network| %>
         <h2 data-handle='title' class='handle-title'><%= network.handle %></h2>
         <p class='bio' data-bio="<%= network.handle%>"><%= network.bio %></p>
