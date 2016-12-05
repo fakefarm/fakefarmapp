@@ -1,11 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+github:
   handle: github
   url: 'github.com/wwwoodall'
   bio: 'eat.sleep.code'
 
-two:
+twitter:
   handle: twitter
   url: 'twitter.com/wwwoodall'
   bio: 'status updates'
+
+youtube: 
+  handle: youtube
+  url: 'https://www.youtube.com/c/wwwoodall'
+  bio: home videos
+
+dribbble: 
+  handle: dribbble
+  url: 'https://www.dribbble.com/wwwoodall'
+  bio: drawing, doodles, and designs 
+   
+codepen:
+  handle: codepen
+  url: 'codepen.io/wwwoodall'
+  bio: 'code for the fun of it!'
