@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  handle: github
+  url: 'github.com/wwwoodall'
+  bio: 'eat.sleep.code'
+
+two:
+  handle: twitter
+  url: 'twitter.com/wwwoodall'
+  bio: 'status updates'
