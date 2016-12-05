@@ -1,3 +1,56 @@
-// Place all the styles related to the wwwoodall controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body { 
+
+  background: lightseagreen;
+  background-image: linear-gradient(-90deg, #EB00A0, #EBE700);
+}
+
+
+#wwwoodall {
+
+ font-family: 'Open Sans', sans-serif; 
+  
+  header {
+    text-align: center;
+  }
+  .headline {
+    font-family: 'Crimson Text', serif;
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .tagline {
+    font-size: 18px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #666;
+  }
+
+  a {
+    background: rgba(255,255,255,0.15);
+    transition: all 500ms;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 1em 0;
+    margin: 1em 5em;
+    border: 1px solid white;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(255,255,255,0.65);
+      color: #aaa;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .headline {
+      font-size: 86px;
+    }
+    .tagline {
+      font-size: 48px;
+    }
+  }
+}

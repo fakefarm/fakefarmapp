@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FakeFarmApp</title>
+    <% if content_for?(:head) %>
+      <%= yield :head %>
+    <% else %>
+      <title>Fake Farm | by Dave Woodall</title>
+    <% end %>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= yield :stylesheets %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
