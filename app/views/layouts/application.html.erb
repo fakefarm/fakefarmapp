@@ -5,7 +5,14 @@
       <%= yield :head %>
     <% else %>
       <title>Fake Farm | by Dave Woodall</title>
-    <% end %>
+		<% end %>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="Typically I rebuild my site once a year to practice what I've been learning. It's a way to experiment in my own place of the Internet. Thanks for stopping by!">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:description" content="Typically I rebuild my site once a year to practice what I've been learning. It's a way to experiment in my own place of the Internet. Thanks for stopping by!">
+		<meta property="og:url" content="http://www.fakefarm.com">
+		<meta property="og:image" content="https://d13yacurqjgara.cloudfront.net/users/137644/screenshots/1628150/bird.jpg">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= yield :stylesheets %>

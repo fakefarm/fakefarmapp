@@ -6,28 +6,30 @@
   <%= stylesheet_link_tag 'wwwoodall' %>
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,600|Open+Sans" rel="stylesheet">
 <% end %>
+
+<div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/FIRT7lf8byw?controls=1&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
  
 <div id='wwwoodall'>
   <header class='hero'>
     <h1 class='headline'>wwwoodall</h1>
-    <p class='tagline'>Dave Woodall online</p>
+    <h2 class='tagline'>Dave Woodall online</h2>
   </header>
   <section class='content'>
-    <div class='handles'>
-      <ul>
-        <% @networks.each do |network| %>
-          <li class="handle <%= network.handle %>">
-            <%= link_to network.handle, "http://www." + network.url, target: '_blank' %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class='network hidden'>
-      <% @networks.each do |network| %>
-        <h2 data-handle='title' class='handle-title'><%= network.handle %></h2>
-        <p class='bio' data-bio="<%= network.handle%>"><%= network.bio %></p>
-    <% end %>
-    </div>
+		<div class='handles'>
+			<% @networks.each do |network| %>
+				<div class="handle <%= network.handle %>">
+					<%= link_to "http://www." + network.url, target: '_blank' do %>
+						<h2 data-handle='title' class='handle-title'><%= network.handle %></h2>
+						<p class='bio' data-bio="<%= network.handle%>"><%= network.bio %></p>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
   </section>
 </div>
 

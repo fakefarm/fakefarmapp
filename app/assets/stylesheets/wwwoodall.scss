@@ -1,7 +1,6 @@
 body { 
+background: white;
 
-  background: lightseagreen;
-  background-image: linear-gradient(-90deg, #EB00A0, #EBE700);
 }
 
 
@@ -14,7 +13,7 @@ body {
   }
   .headline {
     font-family: 'Crimson Text', serif;
-    color: white;
+    color: #aaa;
     font-size: 36px;
     font-weight: 600;
   }
@@ -27,30 +26,80 @@ body {
   }
 
   a {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.25);
     transition: all 500ms;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 18px;
     text-decoration: none;
     display: block;
     padding: 1em 0;
-    margin: 1em 5em;
-    border: 1px solid white;
+    margin: 1em 2em;
+    border: 1px solid black;
     border-radius: 4px;
 
     &:hover {
-      background: rgba(255,255,255,0.65);
+      background: rgba(0,0,0,0.25);
       color: #aaa;
     }
   }
 
-  @media (min-width: 1100px) {
+  @media (min-width: 760px) {
     .headline {
       font-size: 86px;
     }
     .tagline {
       font-size: 48px;
     }
+		.content {
+			margin: 0 auto;
+			width: 80%;
+		}
+		.handle {
+			float: left;
+margin-left: 1%;
+width: 32%;
+		}
+    a { 
+			text-align: left;
+			margin-left: 1em;
+			margin-right: 1em;
+			padding: 2em;
+		}
   }
+}
+
+
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
 }
