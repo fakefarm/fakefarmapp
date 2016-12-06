@@ -25,6 +25,13 @@ background: white;
     color: rgba(255,255,255,0.8);
   }
 
+  .handle-title {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+
   a {
     background: rgba(255,255,255,0.25);
     transition: all 500ms;

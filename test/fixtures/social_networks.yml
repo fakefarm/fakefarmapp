@@ -3,12 +3,12 @@
 github:
   handle: github
   url: 'github.com/wwwoodall'
-  bio: eat.sleep.code. 
+  bio: watch me code
 
 youtube: 
   handle: youtube
   url: 'youtube.com/c/wwwoodall'
-  bio: home videos and bible to music 
+  bio: subscribe to my channel 
 
 dribbble: 
   handle: dribbble
@@ -18,15 +18,15 @@ dribbble:
 flickr:
   handle: flickr
   url: 'flickr.com/photos/davewoodall/albums'
-  bio: where the good times roll
+  bio: photos from a different life 
    
 codepen:
   handle: codepen
   url: 'codepen.io/wwwoodall'
-  bio: fun place to tinker with html 
+  bio: a great place to tinker and get inspired by other coders
     
 twitter:
   handle: twitter
   url: 'twitter.com/wwwoodall'
-  bio: mostly a place for me to save links for later viewing 
+  bio: mostly a place for me to save links for later 
 
