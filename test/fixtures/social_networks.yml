@@ -3,24 +3,25 @@
 github:
   handle: github
   url: 'github.com/wwwoodall'
-  bio: 'eat.sleep.code'
-
-twitter:
-  handle: twitter
-  url: 'twitter.com/wwwoodall'
-  bio: 'status updates'
+  bio: eat.sleep.code. 
 
 youtube: 
   handle: youtube
   url: 'youtube.com/c/wwwoodall'
-  bio: home videos
+  bio: home videos and bible to music 
 
 dribbble: 
   handle: dribbble
   url: 'dribbble.com/wwwoodall'
-  bio: drawing, doodles, and designs 
+  bio: drawing, doodles, designs 
    
 codepen:
   handle: codepen
   url: 'codepen.io/wwwoodall'
-  bio: 'code for the fun of it!'
+  bio: fun place to tinker with html 
+    
+twitter:
+  handle: twitter
+  url: 'twitter.com/wwwoodall'
+  bio: mostly a place for me to save links for later viewing 
+

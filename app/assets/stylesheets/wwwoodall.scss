@@ -13,16 +13,16 @@ background: white;
   }
   .headline {
     font-family: 'Crimson Text', serif;
-    color: #aaa;
+    color: rgba(255,255,255,0.9);
     font-size: 36px;
     font-weight: 600;
   }
   .tagline {
-    font-size: 18px;
+    font-size: 28px;
     font-family: 'Crimson Text', serif;
     font-weight: 400;
     font-style: italic;
-    color: #666;
+    color: rgba(255,255,255,0.8);
   }
 
   a {
@@ -44,7 +44,7 @@ background: white;
     }
   }
 
-  @media (min-width: 760px) {
+  @media (min-width: 960px) {
     .headline {
       font-size: 86px;
     }
@@ -53,18 +53,20 @@ background: white;
     }
 		.content {
 			margin: 0 auto;
-			width: 80%;
+			width: 90%;
 		}
-		.handle {
-			float: left;
-margin-left: 1%;
-width: 32%;
-		}
+    .handle {
+      float: left;
+      margin-left: 1%;
+      width: 32%;
+      height: 220px;
+    }
     a { 
 			text-align: left;
 			margin-left: 1em;
 			margin-right: 1em;
 			padding: 2em;
+      height: 195px;
 		}
   }
 }
