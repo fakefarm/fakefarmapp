@@ -1,12 +1,12 @@
 body { 
-background: white;
-
+  background: white;
 }
 
 
 #wwwoodall {
 
  font-family: 'Open Sans', sans-serif; 
+ height: 1200px;
   
   header {
     text-align: center;
@@ -106,9 +106,9 @@ background: white;
   .video-foreground { width: 300%; left: -100%; }
 }
 @media all and (max-width: 600px) {
-.vid-info { width: 50%; padding: .5rem; }
-.vid-info h1 { margin-bottom: .2rem; }
+  .vid-info { width: 50%; padding: .5rem; }
+  .vid-info h1 { margin-bottom: .2rem; }
 }
 @media all and (max-width: 500px) {
-.vid-info .acronym { display: none; }
+  .vid-info .acronym { display: none; }
 }
