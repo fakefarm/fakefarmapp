@@ -1,3 +1,5 @@
+@import 'layout';
+
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -11,3 +13,7 @@ li { list-style: none; }
 }
 
 
+body {  // temporary
+  background: #cfecf2
+}
+img {width: 100%;}
