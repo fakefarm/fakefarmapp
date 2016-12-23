@@ -14,3 +14,18 @@ one:
   blocked: false
   completed: false
 
+two:
+  title: add users
+  summary: working with bob the builder
+  ticket: JIRA-124
+  merge: 32
+  date_due: <%= 2.weeks.from_now %>
+  date_started:
+  date_completed:
+  started: false
+  trashed: false
+  paused: false
+  blocked: false
+  completed: false
+
+

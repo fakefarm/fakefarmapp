@@ -1,3 +1,16 @@
-<h1>tickets</h1>
+<div class='l-container-center'>
+  <h1>tickets</h1>
 
-<%= link_to 'new ticket', new_ticket_path %>
+  <div class="notice">
+    <%= notice %>
+  </div>
+
+  <section class='tickets-container'>
+    <% @ticket_decorator.tickets.each do |ticket| %>
+    <div>
+      <%= ticket.title %>
+    </div>
+    <% end %>
+  </section>
+  <%= link_to 'new ticket', new_ticket_path %>
+</div>
