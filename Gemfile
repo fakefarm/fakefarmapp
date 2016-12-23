@@ -14,16 +14,15 @@ gem 'minitest-rails'
 
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'pry-rails'
 end
 
 group :development do
-  gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
-  gem "minitest-rails-capybara"
+  gem 'minitest-rails-capybara'
 end
