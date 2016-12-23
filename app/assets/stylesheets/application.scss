@@ -9,13 +9,9 @@ body, h1, h2, p, ul, li {
 
 li { list-style: none; }
 
-.hidden { 
+.hidden {
   opacity: 0;
   visibility: none;
 }
 
-
-body {  // temporary
-  background: #cfecf2
-}
-img {width: 100%;}
+.bird { width: 150px; }
