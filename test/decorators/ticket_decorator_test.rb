@@ -1,9 +1,9 @@
 require 'test_helper'
 
 class TicketDecoratorTest < ActiveSupport::TestCase
-  test "these are real" do
-    tix = [tickets(:one), tickets(:two)]
+  test 'single ticket has a show method' do
+    tix = tickets(:one)
     td = TicketDecorator.new(tix)
-    assert_equal td.count, 2
+    assert_equal td.title, tix.title
   end
 end

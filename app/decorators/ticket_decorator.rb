@@ -1,12 +1,12 @@
 class TicketDecorator
 
-  attr_reader :tickets
+  attr_reader :ticket
 
-  def initialize(tickets)
-    @tickets = tickets
+  def initialize(ticket)
+    @ticket = ticket
   end
 
-  def count
-    tickets.count
+  def method_missing(method_name, *args, &block)
+    ticket.send(method_name, *args, &block)
   end
 end
