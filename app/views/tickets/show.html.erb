@@ -13,3 +13,7 @@
   <%= f.date_field :date_started %>
   <%= f.button 'Update' %>
 <% end %> 
+
+<section class='actions'>
+  <%= button_to 'Start ticket', @ticket_decorator.ticket, remote: true, method: :patch, params: { 'ticket[started]' => 'true' } %>
+</section>
