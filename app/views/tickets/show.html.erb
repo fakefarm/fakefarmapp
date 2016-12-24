@@ -1,0 +1,15 @@
+<h1><%= @ticket_decorator.title %></h1>
+
+<%= form_for @ticket_decorator.ticket do |f| %>
+  <%= f.label :ticket %>
+  <%= f.text_field :ticket %>
+  <%= f.label :summary %>
+  <%= f.text_field :summary %>
+  <%= f.label :merge %>
+  <%= f.text_field :merge %>
+  <%= f.label :date_due %>
+  <%= f.date_field :date_due %>
+  <%= f.label :date_started %>
+  <%= f.date_field :date_started %>
+  <%= f.button 'Update' %>
+<% end %> 

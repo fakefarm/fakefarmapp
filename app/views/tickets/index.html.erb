@@ -6,9 +6,9 @@
   </div>
 
   <section class='tickets-container'>
-    <% @ticket_decorator.tickets.each do |ticket| %>
+    <% @tickets_decorator.tickets.each do |ticket| %>
     <div>
-      <%= ticket.title %>
+      <%= link_to ticket.title, ticket_path(ticket) %>
     </div>
     <% end %>
   </section>

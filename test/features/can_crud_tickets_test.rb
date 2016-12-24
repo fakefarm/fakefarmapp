@@ -28,6 +28,34 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
     end
   end
 
+  feature 'User updates an existing ticket' do
+    scenario 'add ticket details' do
+      @ticket = tickets(:one) 
+      visit root_path
+     
+      # click on ticket title
+      click_link 'tickets'
+      click_link @ticket.title
+      assert_content page, @ticket.title
+
+      # fill in edit page with rest of contents
+      page.fill_in 'Ticket', with: @ticket.ticket
+      page.fill_in 'Summary', with: @ticket.summary
+      page.fill_in 'Merge', with: @ticket.merge
+      page.fill_in 'Date due', with: 2.weeks.from_now 
+      page.fill_in 'Date started', with: 3.days.ago 
+      # save
+      click_button 'Update'
+
+      # returned to index
+      assert_equal current_path, tickets_path
+      within('.notice') do
+        assert page.has_content?('ticket updated')
+      end
+    end
+  end
+
+
     # can be viewed from root
     # can be read from index
     # can be created from index
