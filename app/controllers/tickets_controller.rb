@@ -24,13 +24,13 @@ class TicketsController < ApplicationController
     ticket.update(ticket_params)
     if ticket.save
       flash.notice = 'ticket updated' 
-      redirect_to tickets_path
+      redirect_to ticket_path(ticket)
     end
   end  
 
 private
 
   def ticket_params
-    params.require(:ticket).permit(:title, :summary, :ticket, :merge, :date_started, :date_due)
+    params.require(:ticket).permit(:title, :summary, :ticket, :merge, :date_started, :date_due, :started, :trashed, :paused, :blocked, :completed)
   end
 end

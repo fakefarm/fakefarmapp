@@ -1,4 +1,5 @@
 <h1><%= @ticket_decorator.title %></h1>
+<%= render partial: 'started', locals: { ticket: @ticket_decorator.ticket } %>
 
 <%= form_for @ticket_decorator.ticket do |f| %>
   <%= f.label :ticket %>
@@ -14,6 +15,4 @@
   <%= f.button 'Update' %>
 <% end %> 
 
-<section class='actions'>
-  <%= button_to 'Start ticket', @ticket_decorator.ticket, remote: true, method: :patch, params: { 'ticket[started]' => 'true' } %>
-</section>
+<%= render partial: 'action_bar', locals: { ticket: @ticket_decorator } %>

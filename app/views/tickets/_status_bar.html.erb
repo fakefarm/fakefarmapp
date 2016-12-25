@@ -1,0 +1,14 @@
+<div class='status-bar'>
+  <% if ticket.started %>
+    <h1>Started</h1>
+    <p>todo: fix these notifiers</p>
+  <% end %>
+  <% if ticket.paused %>
+    <h1>Paused</h1>
+  <% end %> 
+  <% if ticket.trashed %>
+  <% end %> 
+  <% if ticket.blocked %>
+    <h1>Blocked</h1>
+  <% end %> 
+</div>
