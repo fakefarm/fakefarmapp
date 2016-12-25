@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
   def index
+    @ticket = Ticket.new
     @tickets_decorator = TicketsDecorator.new(Ticket.all)
   end
 

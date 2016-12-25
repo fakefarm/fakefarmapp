@@ -26,6 +26,7 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
         assert page.has_content?(ticket.title)
       end
     end
+
     scenario 'with just ticket number' do
 
       # from the homepage
@@ -36,6 +37,26 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
       # from tickets, click new
       click_link 'new ticket'
       assert_equal current_path, new_ticket_path
+
+      # from new, fill in form
+      ticket = tickets(:one)
+      page.fill_in 'Ticket', :with => ticket.ticket
+      click_button 'Create Ticket'
+
+      # expect to be directed to tickets
+      assert_equal current_path, tickets_path
+      assert_content page, 'tickets'
+      within('.tickets-container') do
+        assert_content page, ticket.ticket
+      end
+    end
+
+    scenario 'from index page' do
+
+      # from the homepage
+      visit root_path
+      click_link 'tickets'
+      assert_content page, 'tickets'
 
       # from new, fill in form
       ticket = tickets(:one)
