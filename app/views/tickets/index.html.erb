@@ -2,9 +2,13 @@
   <h1>tickets</h1>
   <section class='tickets-container'>
     <% @tickets_decorator.tickets.each do |ticket| %>
-    <div>
-      <%= link_to ticket.title, ticket_path(ticket) %>
-    </div>
+      <div>
+        <%= link_to ticket_path(ticket) do %>
+          <span><%= ticket.ticket %></span>
+          <span><%= ticket.title %></span>
+          <%= render partial: 'status_bar', locals: { ticket: ticket } %>
+        <% end %>
+      </div>
     <% end %>
   </section>
   <%= link_to 'new ticket', new_ticket_path %>
