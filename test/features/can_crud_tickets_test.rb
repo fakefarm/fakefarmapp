@@ -2,7 +2,7 @@ require "test_helper"
 
 class CanCrudTicketsTest < Capybara::Rails::TestCase
   feature 'User successfully creates new ticket' do
-    scenario 'starting at root path' do
+    scenario 'with just title' do
 
       # from the homepage
       visit root_path
@@ -26,6 +26,29 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
         assert page.has_content?(ticket.title)
       end
     end
+    scenario 'with just ticket number' do
+
+      # from the homepage
+      visit root_path
+      click_link 'tickets'
+      assert_content page, 'tickets'
+
+      # from tickets, click new
+      click_link 'new ticket'
+      assert_equal current_path, new_ticket_path
+
+      # from new, fill in form
+      ticket = tickets(:one)
+      page.fill_in 'Ticket', :with => ticket.ticket
+      click_button 'Create Ticket'
+
+      # expect to be directed to tickets
+      assert_equal current_path, tickets_path
+      assert_content page, 'tickets'
+      within('.tickets-container') do
+        assert_content page, ticket.ticket
+      end
+    end
   end
 
   feature 'User updates an existing ticket' do
@@ -47,10 +70,25 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
       # save
       click_button 'Update'
 
-      # returned to index
-      assert_equal current_path, tickets_path
+      # stay on ticket page 
+      assert_equal current_path, ticket_path(@ticket)
       within('.notice') do
         assert page.has_content?('ticket updated')
+      end
+    end
+
+    scenario 'start ticket from show' do
+      @ticket = tickets(:one)
+      visit root_path
+      click_link 'tickets'
+      click_link @ticket.title
+      click_on 'Start ticket'
+      assert_equal current_path, ticket_path(@ticket)
+      within('.notice') do
+        assert page.has_content?('ticket updated')
+      end
+      within('.status-bar') do
+        assert page.has_content?('Started')
       end
     end
   end
