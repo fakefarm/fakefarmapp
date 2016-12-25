@@ -1,5 +1,5 @@
 <h1><%= @ticket_decorator.title %></h1>
-<%= render partial: 'started', locals: { ticket: @ticket_decorator.ticket } %>
+<%= render partial: 'status_bar', locals: { ticket: @ticket_decorator.ticket } %>
 
 <%= form_for @ticket_decorator.ticket do |f| %>
   <%= f.label :ticket %>
