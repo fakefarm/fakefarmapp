@@ -11,6 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bourbon'
 gem 'minitest-rails'
+gem 'minitest-reporters'
 
 
 group :development, :test do
