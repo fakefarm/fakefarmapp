@@ -48,3 +48,13 @@
   .paused { background: yellow; }
   .blocked { background: red; }
 }
+
+.listed-ticket {
+  text-decoration: none;
+  &:hover {
+    margin-left: $single-space;
+    &::before{
+      content: "*"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<div class='status-bar'>
+<span class='status-bar'>
   <% if ticket.started && !ticket.paused && !ticket.completed && !ticket.trashed %>
     <span class='started' >In Progress</span>
   <% end %>
@@ -14,4 +14,4 @@
   <% if ticket.blocked %>
     <span class='blocked' >Blocked</span>
   <% end %>
-</div>
+</span>
