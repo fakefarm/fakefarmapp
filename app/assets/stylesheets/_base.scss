@@ -22,3 +22,9 @@ a:hover,
 input[type="submit"]:hover {
   transition: all 200ms ease-in-out;
 }
+
+.notice {
+  background: $mint;
+  text-align: center;
+  padding: $half-space;
+}

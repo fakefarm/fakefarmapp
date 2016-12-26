@@ -22,9 +22,11 @@
 
   <body>
     <%= render partial: 'shared/header' %>
-    <div class="notice">
-      <%= notice %>
-    </div>
+    <% if notice %>
+      <div class="notice">
+        <%= notice %>
+      </div>
+    <% end %>
     <%= yield %>
     <%= render partial: 'shared/footer' %>
   </body>
