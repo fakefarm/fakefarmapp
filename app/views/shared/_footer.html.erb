@@ -1,0 +1,16 @@
+<footer class='l-container-center footer'>
+  <section class='intro-content l-half'>
+    <%= image_tag 'bird.svg', class: 'bird' %>
+    <h1 class='h2'>Fake Farm</h1>
+    <p class='h3'><%= link_to "Dave Woodall's", "http://www.davewoodall.com", target: '_blank'%> playground</p>
+  </section>
+  <section class='project-content l-half'>
+    <h2 class='h2'>Pet projects</h2>
+    <ul>
+      <li><%= link_to 'home', root_path %></li>
+      <li><%= link_to 'tickets', tickets_path %></li>
+      <li><%= link_to 'unpopular videos', unpopular_videos_path %></li>
+      <li><%= link_to 'wwwoodall', wwwoodall_path %></li>
+    </ul>
+  </section>
+</footer>

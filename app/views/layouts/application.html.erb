@@ -14,15 +14,18 @@
 		<meta property="og:url" content="http://www.fakefarm.com">
 		<meta property="og:image" content="https://d13yacurqjgara.cloudfront.net/users/137644/screenshots/1628150/bird.jpg">
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,600|Open+Sans" rel="stylesheet">
     <%= yield :stylesheets %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render partial: 'shared/header' %>
     <div class="notice">
       <%= notice %>
     </div>
     <%= yield %>
+    <%= render partial: 'shared/footer' %>
   </body>
 </html>
