@@ -6,6 +6,14 @@ class TicketDecorator
     @ticket = ticket
   end
 
+  def headline
+    if ticket.title?
+      ticket.title
+    else
+      ticket.ticket
+    end
+  end
+
   def method_missing(method_name, *args, &block)
     ticket.send(method_name, *args, &block)
   end

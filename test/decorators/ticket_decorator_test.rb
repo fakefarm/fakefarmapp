@@ -6,4 +6,10 @@ class TicketDecoratorTest < ActiveSupport::TestCase
     td = TicketDecorator.new(tix)
     assert_equal td.title, tix.title
   end
+
+  test 'headline provides info' do
+    tix = tickets(:two)
+    td = TicketDecorator.new(tix)
+    assert_equal td.headline, tix.ticket
+  end
 end

@@ -15,7 +15,7 @@ one:
   completed: false
 
 two:
-  title: add users
+  title:
   summary: working with bob the builder
   ticket: JIRA-124
   merge: 32
@@ -27,5 +27,3 @@ two:
   paused: false
   blocked: false
   completed: false
-
-
