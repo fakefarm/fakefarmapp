@@ -1,0 +1,30 @@
+body { font-family: 'Crimson Text'; }
+
+.h1 {
+  font-size: $font-base-3;
+  margin-bottom: $double-space;
+}
+.h2 {
+  font-size: $font-base-4;
+  margin-top: $double-space;
+  margin-bottom: $half-space;
+}
+
+.h3 {
+  font-size: $font-base-5;
+  margin-top: $double-space;
+  margin-bottom: $half-space;
+}
+
+@media (min-width: $min-width) {
+  .h1 { font-size: $font-base-1; }
+  .h2 {
+    margin-top: $single-space;
+    font-size: $font-base-3;
+  }
+  .h3 { font-size: $font-base-4; }
+}
+
+i {
+  font-size: $font-base-4;
+}

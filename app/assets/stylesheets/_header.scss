@@ -1,0 +1,10 @@
+.bird-header {
+  width: 30px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+@media (min-width: $min-width) {
+  .bird-header { width: 50px; }
+}

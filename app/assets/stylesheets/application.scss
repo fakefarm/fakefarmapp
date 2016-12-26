@@ -1,17 +1,9 @@
 @import 'bourbon';
+@import 'variables';
 @import 'layout';
+@import 'typography';
 @import 'components/video_wrapper';
+@import 'base';
 
-body, h1, h2, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-li { list-style: none; }
-
-.hidden {
-  opacity: 0;
-  visibility: none;
-}
-
-.bird { width: 150px; }
+@import 'header';
+@import 'footer';

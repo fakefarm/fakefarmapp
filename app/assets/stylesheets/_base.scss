@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+header {
+}
+
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li { list-style: none; }
+
+.hidden {
+  opacity: 0;
+  visibility: none;
+}

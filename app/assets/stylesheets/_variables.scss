@@ -1,0 +1,25 @@
+// media queries;
+$min-width: 500px;
+
+// color
+$dark: #aaa;
+$mint: #00ffa2;
+$brown: #918c5d;
+$tan: #b5b18c;
+
+// spacing
+$half-space: 1%;
+$single-space: 2%;
+$double-space: 5%;
+
+$line-height-1: 25px;
+$line-height-2: 50px;
+
+// font
+$font-base: 12px;
+$font-base-6: $font-base * 0.5;
+$font-base-5: $font-base * 1.5;
+$font-base-4: $font-base * 2;
+$font-base-3: $font-base * 3;
+$font-base-2: $font-base * 5;
+$font-base-1: $font-base * 7;
