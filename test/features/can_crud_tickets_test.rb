@@ -74,9 +74,9 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
 
   feature 'User updates an existing ticket' do
     scenario 'add ticket details' do
-      @ticket = tickets(:one) 
+      @ticket = tickets(:one)
       visit root_path
-     
+
       # click on ticket title
       click_link 'tickets'
       click_link @ticket.title
@@ -86,12 +86,12 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
       page.fill_in 'Ticket', with: @ticket.ticket
       page.fill_in 'Summary', with: @ticket.summary
       page.fill_in 'Merge', with: @ticket.merge
-      page.fill_in 'Date due', with: 2.weeks.from_now 
-      page.fill_in 'Date started', with: 3.days.ago 
+      page.fill_in 'Date due', with: 2.weeks.from_now
+      page.fill_in 'Date started', with: 3.days.ago
       # save
       click_button 'Update'
 
-      # stay on ticket page 
+      # stay on ticket page
       assert_equal current_path, ticket_path(@ticket)
       within('.notice') do
         assert page.has_content?('ticket updated')
@@ -103,7 +103,7 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
       visit root_path
       click_link 'tickets'
       click_link @ticket.title
-      click_on 'Start ticket'
+      click_on 'Start'
       assert_equal current_path, ticket_path(@ticket)
       within('.notice') do
         assert page.has_content?('ticket updated')

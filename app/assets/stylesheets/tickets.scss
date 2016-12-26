@@ -1,0 +1,50 @@
+@import 'variables';
+
+.action-bar {
+  .button_to {
+    margin-bottom: 1em;
+  }
+
+  input[type="submit"] {
+      background: white;
+      color: $brown;
+      border: 1px solid $tan;
+      border-radius: 4px;
+      &:hover {
+        background: $tan;
+        color: white;
+        cursor: pointer;
+      }
+  }
+}
+
+@media (min-width: $min-width) {
+  .action-bar .button_to {
+    margin-bottom: 0;
+    margin-right: 1em;
+    display: inline-block;
+  }
+}
+
+
+@media (min-width: $min-width) {
+  .new-ticket {
+    padding: $single-space;
+    border: 1px solid $dark;
+    border-radius: 5px;
+  }
+}
+
+.status-bar {
+  margin-bottom: $double-space;
+  span {
+    padding: $half-space;
+    border-radius: 4px;
+    margin-right: 20px;
+    color: white;
+    font-size: $font-base-6;
+  }
+  .started { background: $mint; }
+  .paused { background: yellow; }
+  .blocked { background: red; }
+}

@@ -1,14 +1,17 @@
 <div class='status-bar'>
-  <% if ticket.started %>
-    <h1>Started</h1>
-    <p>todo: fix these notifiers</p>
+  <% if ticket.started && !ticket.paused && !ticket.completed && !ticket.trashed %>
+    <span class='started' >In Progress</span>
   <% end %>
-  <% if ticket.paused %>
-    <h1>Paused</h1>
-  <% end %> 
+  <% if ticket.paused && !ticket.blocked && !ticket.trashed %>
+    <span class='paused' >Paused</span>
+  <% end %>
   <% if ticket.trashed %>
-  <% end %> 
+    <span class='trashed' >Trashed</span>
+  <% end %>
+  <% if ticket.completed %>
+    <span class='completed' >completed</span>
+  <% end %>
   <% if ticket.blocked %>
-    <h1>Blocked</h1>
-  <% end %> 
+    <span class='blocked' >Blocked</span>
+  <% end %>
 </div>

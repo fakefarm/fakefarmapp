@@ -17,3 +17,8 @@ li { list-style: none; }
   opacity: 0;
   visibility: none;
 }
+
+a:hover,
+input[type="submit"]:hover {
+  transition: all 200ms ease-in-out;
+}

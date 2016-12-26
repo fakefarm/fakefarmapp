@@ -1,26 +1,30 @@
 <section class='action-bar'>
-  <% unless ticket.completed %>
+  <% unless ticket.completed || ticket.trashed %>
     <% unless ticket.started %>
-      <%= button_to 'Start ticket',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[started]'   => 'true' } %>
+      <%= button_to 'Start',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[started]'   => 'true' } %>
     <% else %>
       <% unless ticket.paused %>
-        <%= button_to 'Pause ticket',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[paused]'    => 'true' } %>
+        <%= button_to 'Pause',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[paused]'    => 'true' } %>
       <% else %>
-        <%= button_to 'Resume ticket',    ticket.ticket, remote: true, method: :patch, params: { 'ticket[paused]'    => 'false' } %>
-      <% end %> 
-    <% end %> 
+        <%= button_to 'Resume',    ticket.ticket, remote: true, method: :patch, params: { 'ticket[paused]'    => 'false' } %>
+      <% end %>
+    <% end %>
+    <% unless ticket.blocked %>
+      <%= button_to 'Blocked',   ticket.ticket, remote: true, method: :patch, params: { 'ticket[blocked]'   => 'true' } %>
+    <% else %>
+      <%= button_to 'Unblocked', ticket.ticket, remote: true, method: :patch, params: { 'ticket[blocked]'   => 'false' } %>
+    <% end %>
     <% unless ticket.trashed %>
-      <%= button_to 'Trash ticket',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[trashed]'   => 'true' } %>
+      <%= button_to 'Trash',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[trashed]'   => 'true' } %>
     <% else %>
       <%= button_to 'Undo trashed',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[trashed]'   => 'false' } %>
-    <% end %> 
-    <% unless ticket.blocked %>
-      <%= button_to 'Blocked ticket',   ticket.ticket, remote: true, method: :patch, params: { 'ticket[blocked]'   => 'true' } %>
-    <% else %>
-      <%= button_to 'Unblocked ticket', ticket.ticket, remote: true, method: :patch, params: { 'ticket[blocked]'   => 'false' } %>
-    <% end %> 
-    <%= button_to 'Complete ticket',  ticket.ticket, remote: true, method: :patch, params: { 'ticket[completed]' => 'true' } %>
+    <% end %>
+    <%= button_to 'Complete',  ticket.ticket, remote: true, method: :patch, params: { 'ticket[completed]' => 'true' } %>
   <% else %>
-    <%= button_to 'Undo completed ticket',  ticket.ticket, remote: true, method: :patch, params: { 'ticket[completed]' => 'false' } %>
-  <% end %> 
+    <% if ticket.completed %>
+      <%= button_to 'Undo completed',  ticket.ticket, remote: true, method: :patch, params: { 'ticket[completed]' => 'false' } %>
+    <% else %>
+      <%= button_to 'Undo trashed',     ticket.ticket, remote: true, method: :patch, params: { 'ticket[trashed]'   => 'false' } %>
+    <% end %>
+  <% end %>
 </section>

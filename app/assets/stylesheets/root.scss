@@ -1,3 +1,18 @@
-// Place all the styles related to the root controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+
+.welcome-content {
+  max-width: 40em;
+  padding: $single-space;
+  line-height: $line-height-1;
+  min-height: 500px;
+}
+
+@media (min-width: $min-width) {
+  .welcome-content {
+    max-width: 40em;
+    padding: $single-space;
+    min-height: 800px;
+    line-height: $line-height-2;
+    font-size: 1.5em;
+  }
+}

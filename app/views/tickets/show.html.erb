@@ -1,18 +1,28 @@
-<h1><%= @ticket_decorator.title %></h1>
-<%= render partial: 'status_bar', locals: { ticket: @ticket_decorator.ticket } %>
+<%= render partial: 'head' %>
 
-<%= form_for @ticket_decorator.ticket do |f| %>
-  <%= f.label :ticket %>
-  <%= f.text_field :ticket %>
-  <%= f.label :summary %>
-  <%= f.text_field :summary %>
-  <%= f.label :merge %>
-  <%= f.text_field :merge %>
-  <%= f.label :date_due %>
-  <%= f.date_field :date_due %>
-  <%= f.label :date_started %>
-  <%= f.date_field :date_started %>
-  <%= f.button 'Update' %>
-<% end %> 
-
-<%= render partial: 'action_bar', locals: { ticket: @ticket_decorator } %>
+<section class='l-container-center'>
+  <section class='l-half'>
+    <%= link_to 'all tickets', tickets_path %>
+    <h1 class='h2'><%= @ticket_decorator.title %></h1>
+    <%= render partial: 'status_bar', locals: { ticket: @ticket_decorator.ticket } %>
+    <hr>
+    <%= render partial: 'action_bar', locals: { ticket: @ticket_decorator } %>
+  </section>
+  <section class='l-half'>
+    <%= form_for @ticket_decorator.ticket do |f| %>
+      <%= f.label :ticket %>
+      <%= f.text_field :ticket %><br>
+      <%= f.label :title %>
+      <%= f.text_field :title %><br>
+      <%= f.label :summary %>
+      <%= f.text_field :summary %><br>
+      <%= f.label :merge %>
+      <%= f.text_field :merge %><br>
+      <%= f.label :date_due %>
+      <%= f.date_field :date_due %><br>
+      <%= f.label :date_started %>
+      <%= f.date_field :date_started %><br>
+      <%= f.button 'Update' %>
+    <% end %>
+  </section>
+</section>

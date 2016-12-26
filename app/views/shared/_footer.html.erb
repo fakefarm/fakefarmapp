@@ -7,7 +7,9 @@
   <section class='project-content l-half'>
     <h2 class='h2'>Pet projects</h2>
     <ul>
-      <li><%= link_to 'home', root_path %></li>
+      <% unless params[:controller] == 'root' %>
+        <li><%= link_to 'back to the farm', root_path %></li>
+      <% end %>
       <li><%= link_to 'tickets', tickets_path %></li>
       <li><%= link_to 'unpopular videos', unpopular_videos_path %></li>
       <li><%= link_to 'wwwoodall', wwwoodall_path %></li>
