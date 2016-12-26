@@ -9,7 +9,7 @@
     <hr>
     <%= render partial: 'action_bar', locals: { ticket: @ticket_decorator } %>
   </section>
-  <section class='l-half'>
+  <section class='l-half border-wrapper'>
     <%= form_for @ticket_decorator.ticket do |f| %>
       <%= f.label :ticket %>
       <%= f.text_field :ticket %><br>
