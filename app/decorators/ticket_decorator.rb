@@ -6,6 +6,10 @@ class TicketDecorator
     @ticket = ticket
   end
 
+  def ticket_url
+    "http://jira.pm/browse/#{ticket.ticket}"
+  end
+
   def headline
     if ticket.title?
       ticket.title

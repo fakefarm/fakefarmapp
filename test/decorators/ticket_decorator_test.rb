@@ -12,4 +12,11 @@ class TicketDecoratorTest < ActiveSupport::TestCase
     td = TicketDecorator.new(tix)
     assert_equal td.headline, tix.ticket
   end
+
+  test 'ticket_url sends text to static jira url' do
+    tix = tickets(:one)
+    jira =  "http://jira.pm/browse/#{tix.ticket}"
+    td = TicketDecorator.new(tix)
+    assert_equal td.ticket_url, jira
+  end
 end
