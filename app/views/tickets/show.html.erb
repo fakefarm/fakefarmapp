@@ -3,7 +3,7 @@
 <section class='l-container-center'>
   <section class='l-half'>
     <%= link_to 'all tickets', tickets_path %>
-    <div><%= @ticket_decorator.ticket.ticket %></div>
+    <div><%= link_to @ticket_decorator.ticket.ticket, @ticket_decorator.ticket_url %></div>
     <h1 class='h2'><%= @ticket_decorator.headline %></h1>
     <%= render partial: 'status_bar', locals: { ticket: @ticket_decorator.ticket } %>
     <hr>

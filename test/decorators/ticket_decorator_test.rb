@@ -17,6 +17,6 @@ class TicketDecoratorTest < ActiveSupport::TestCase
     tix = tickets(:one)
     jira =  "http://jira.pm/browse/#{tix.ticket}"
     td = TicketDecorator.new(tix)
-    assert_equal td.ticket_url, jira
+    assert_equal jira, td.ticket_url
   end
 end

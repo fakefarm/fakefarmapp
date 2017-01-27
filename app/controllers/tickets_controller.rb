@@ -24,10 +24,10 @@ class TicketsController < ApplicationController
     ticket = Ticket.find(params[:id])
     ticket.update(ticket_params)
     if ticket.save
-      flash.notice = 'ticket updated' 
+      flash.notice = 'ticket updated'
       redirect_to ticket_path(ticket)
     end
-  end  
+  end
 
 private
 

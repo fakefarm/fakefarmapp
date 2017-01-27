@@ -109,7 +109,7 @@ class CanCrudTicketsTest < Capybara::Rails::TestCase
         assert page.has_content?('ticket updated')
       end
       within('.status-bar') do
-        assert page.has_content?('Started')
+        assert page.has_content?('In Progress')
       end
     end
   end
