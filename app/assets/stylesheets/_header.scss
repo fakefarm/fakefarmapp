@@ -6,5 +6,18 @@
 }
 
 @media (min-width: $min-width) {
-  .bird-header { width: 50px; }
+  .bird-header { width: 30px; }
+  nav {
+    padding: $half-space;
+    position: relative;
+    top: 0;
+    .nav-links {
+      padding: 0;
+      margin: 0;
+      text-align: right;
+    }
+    .nav-link {
+      display: inline-block;
+    }
+  }
 }

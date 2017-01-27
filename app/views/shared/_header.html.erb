@@ -1,3 +1,18 @@
 <header>
   <%= link_to (image_tag 'bird.svg', class: 'bird-header'), root_path %>
+  <nav>
+    <ul class='nav-links'>
+      <li class='nav-link' ><%= link_to 'fake farm', root_path %></li>
+      <li class='nav-link' ><%#= link_to 'about this demo' %></li>
+      <li class='nav-link' ><%= link_to 'blog', 'http://wwwoodall.blogspot.com', target: '_blank' %></li>
+      <li class='nav-link' ><%= link_to 'dave woodall', 'http://www.davewoodall.com', target: '_blank' %></li>
+    </ul>
+  </nav>
 </header>
+
+<section>
+  <!-- <div class="about-btn">about this pet project</div> -->
+  <div class="description">
+    <%#= render "#{params[:controller]}/description" rescue nil %>
+  </div>
+</section>
