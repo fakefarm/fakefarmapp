@@ -101,6 +101,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.12.1)
+    newrelic_rpm (3.18.0.329)
     nio4r (1.2.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
@@ -191,6 +192,7 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   minitest-reporters
+  newrelic_rpm
   pg (~> 0.18)
   pry-rails
   puma (~> 3.0)
