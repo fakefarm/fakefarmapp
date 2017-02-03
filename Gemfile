@@ -12,6 +12,7 @@ gem 'bourbon'
 gem 'minitest-rails'
 gem 'minitest-reporters'
 gem 'newrelic_rpm'
+gem 'figaro'
 
 group :development, :test do
   gem 'pry-rails'
