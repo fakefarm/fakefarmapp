@@ -1,4 +1,8 @@
+require 'new_relic/agent/method_tracer'
+
 class TicketsController < ApplicationController
+  include ::NewRelic::Agent::MethodTracer
+
   def index
     @ticket = Ticket.new
     @tickets_decorator = TicketsDecorator.new(Ticket.all)
@@ -28,6 +32,9 @@ class TicketsController < ApplicationController
       redirect_to ticket_path(ticket)
     end
   end
+
+  add_method_tracer :index, 'Custom/index'
+
 
 private
 
