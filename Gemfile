@@ -27,3 +27,5 @@ end
 group :test do
   gem 'minitest-rails-capybara'
 end
+
+ruby '2.3.1'
