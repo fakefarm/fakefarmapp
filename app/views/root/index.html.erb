@@ -1,15 +1,22 @@
 <%= render partial: 'head' %>
 
 <div class='l-container-center welcome-content'>
-  <h1 class='h1'>Fake Farm</h1>
-  <h2 class='h2'>
-    HTML is the new <i class='h2'>English</i>
-  </h2>
-  <p>
-    People code for different reasons. I code because I view it as a literacy. Consider how difficult it is for people who don't know English in America.  I describe the web as a country called <i>InternetLand</i>. In InternetLand, HTML is the new English. I wanted to join the online economy without being bound to a 'translator' so that I could communicate freely because there is more opportunity in InternetLand than in America.
-  </p>
-  <h2 class='h2'>It's all fake</h2>
-  <p>
-    Fake Farm is a Ruby on Rails app that I use as a playground to practice code conepts. 
-  </p>
+  <section class='l-half center-text'>
+    <h1 class='h1'>
+      Fake Farm
+    </h1>
+  </section>
+  <section class='l-half'>
+    <h2 class='h3 tagline'>pet projects by Dave Woodall</h2>
+    <ul>
+      <% unless params[:controller] == 'root' %>
+      <li><%= link_to 'back to the farm', root_path %></li>
+      <% end %>
+      <li><%= link_to 'tickets', tickets_path %></li>
+      <li><%= link_to 'unpopular videos', unpopular_videos_path %></li>
+      <li><%= link_to 'wwwoodall', wwwoodall_path %></li>
+      <li><%= link_to '(old fake farm)', "http://wwwoodall.github.io/fakefarm/" %></li>
+    </ul>
+    <div class="hot-tub"></div>
+  </section>
 </div>

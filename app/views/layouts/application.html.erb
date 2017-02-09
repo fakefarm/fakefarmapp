@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <% if content_for?(:head) %>
-      <%= yield :head %>
-    <% else %>
-      <title>Fake Farm | by Dave Woodall</title>
-		<% end %>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="description" content="Typically I rebuild my site once a year to practice what I've been learning. It's a way to experiment in my own place of the Internet. Thanks for stopping by!">
@@ -18,6 +13,11 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,600|Open+Sans" rel="stylesheet">
     <%= yield :stylesheets %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if content_for?(:head) %>
+      <%= yield :head %>
+    <% else %>
+      <title>Fake Farm | by Dave Woodall</title>
+    <% end %>
   </head>
 
   <body>
@@ -28,6 +28,5 @@
       </div>
     <% end %>
     <%= yield %>
-    <%= render partial: 'shared/footer' %>
   </body>
 </html>

@@ -17,7 +17,10 @@ body { font-family: 'Crimson Text'; }
 }
 
 @media (min-width: $min-width) {
-  .h1 { font-size: $font-base-1; }
+  .h1 {
+    font-size: $font-base-1;
+    line-height: 110px;
+  }
   .h2 {
     margin-top: $single-space;
     font-size: $font-base-3;
@@ -27,4 +30,8 @@ body { font-family: 'Crimson Text'; }
 
 i {
   font-size: $font-base-4;
+}
+
+.center-text {
+  text-align: center;
 }

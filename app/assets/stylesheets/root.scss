@@ -1,18 +1,28 @@
 @import 'variables';
 
 .welcome-content {
-  max-width: 40em;
   padding: $single-space;
   line-height: $line-height-1;
-  min-height: 500px;
 }
 
 @media (min-width: $min-width) {
+  .hot-tub {
+    background: url(https://d13yacurqjgara.cloudfront.net/users/137644/screenshots/1877532/hottub.png) no-repeat;
+    width: 800px;
+    height: 600px;
+    bottom: 0px;
+    left: -250px;
+    z-index: -1;
+    position: relative;
+  }
   .welcome-content {
     max-width: 40em;
     padding: $single-space;
-    min-height: 800px;
     line-height: $line-height-2;
     font-size: 1.5em;
   }
+}
+
+.tagline {
+  font-style: italic;
 }
