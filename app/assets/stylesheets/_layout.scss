@@ -9,7 +9,8 @@
   .l-container-center {
     max-width: none;
     width: auto;
-    margin-left: 5em;
+    margin: 0;
+    margin-left: 9em;
   }
 }
 
@@ -22,7 +23,7 @@
 @media (min-width: $min-width) {
   .l-half {
     float: left;
-    width: 46%;
+    width: 48%;
     padding: $single-space $double-space;
   }
 }

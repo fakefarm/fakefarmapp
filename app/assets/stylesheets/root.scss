@@ -11,7 +11,7 @@
     width: 800px;
     height: 600px;
     bottom: 0px;
-    left: -250px;
+    left: -160px;
     z-index: -1;
     position: relative;
   }
@@ -25,4 +25,10 @@
 
 .tagline {
   font-style: italic;
+}
+
+@media (min-width: $min-width) {
+  .projects {
+    text-align: right;
+  }
 }
