@@ -13,6 +13,8 @@ gem 'minitest-rails'
 gem 'minitest-reporters'
 gem 'newrelic_rpm'
 gem 'figaro'
+gem 'httparty'
+
 
 group :development, :test do
   gem 'pry-rails'
