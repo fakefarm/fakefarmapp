@@ -32,3 +32,26 @@
     text-align: right;
   }
 }
+
+.projects li {
+  position: relative;
+}
+
+.projects li > .link-hover-content  {
+  position: absolute;
+  top: 0;
+  left: 400px;
+  z-index: 10;
+}
+
+.projects .link-hover-content {
+  width: 700px;
+  background: red;
+  opacity: 0;
+  height: 0;
+}
+
+.projects li:hover > .link-hover-content {
+  opacity: 1;
+  height: inherit;
+}
