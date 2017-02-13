@@ -1,44 +1,37 @@
 class VersesController < ApplicationController
   before_action :set_verse, only: [:show, :edit, :update, :destroy]
 
-  # GET /verses
-  # GET /verses.json
   def index
-    @verses = Verse.all
+    @verse = Verse.new
+    @bible = Bible.new(Verse.last)
+    @bible.get
   end
 
-  # GET /verses/1
-  # GET /verses/1.json
   def show
+    @bible = Bible.new(@verse)
+    @bible.get
   end
 
-  # GET /verses/new
   def new
     @verse = Verse.new
   end
 
-  # GET /verses/1/edit
   def edit
   end
 
-  # POST /verses
-  # POST /verses.json
   def create
     @verse = Verse.new(verse_params)
-
     respond_to do |format|
       if @verse.save
-        format.html { redirect_to @verse, notice: 'Verse was successfully created.' }
+        format.html { redirect_to verses_path, notice: 'Verse was successfully created.' }
         format.json { render :show, status: :created, location: @verse }
       else
-        format.html { render :new }
+        format.html { render verses_path }
         format.json { render json: @verse.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /verses/1
-  # PATCH/PUT /verses/1.json
   def update
     respond_to do |format|
       if @verse.update(verse_params)
@@ -51,8 +44,6 @@ class VersesController < ApplicationController
     end
   end
 
-  # DELETE /verses/1
-  # DELETE /verses/1.json
   def destroy
     @verse.destroy
     respond_to do |format|
@@ -62,12 +53,10 @@ class VersesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_verse
       @verse = Verse.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def verse_params
       params.require(:verse).permit(:book, :chapter, :verse, :translation)
     end

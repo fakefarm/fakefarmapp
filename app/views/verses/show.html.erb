@@ -1,24 +1,5 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Book:</strong>
-  <%= @verse.book %>
-</p>
-
-<p>
-  <strong>Chapter:</strong>
-  <%= @verse.chapter %>
-</p>
-
-<p>
-  <strong>Verse:</strong>
-  <%= @verse.verse %>
-</p>
-
-<p>
-  <strong>Translation:</strong>
-  <%= @verse.translation %>
-</p>
-
+<h1 class='h2'><%= @bible.reference %></h1>
+<h2 class='h1'><%= @bible.text %></h2>
 <%= link_to 'Edit', edit_verse_path(@verse) %> |
 <%= link_to 'Back', verses_path %>

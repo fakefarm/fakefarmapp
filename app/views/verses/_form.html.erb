@@ -14,24 +14,10 @@
   <div class="field">
     <%= f.label :book %>
     <%= f.text_field :book %>
-  </div>
-
-  <div class="field">
     <%= f.label :chapter %>
     <%= f.text_field :chapter %>
-  </div>
-
-  <div class="field">
     <%= f.label :verse %>
     <%= f.text_field :verse %>
-  </div>
-
-  <div class="field">
-    <%= f.label :translation %>
-    <%= f.text_field :translation %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'search' %>
   </div>
 <% end %>
