@@ -3,13 +3,13 @@ class VersesController < ApplicationController
 
   def index
     @verse = Verse.new
-    @bible = Bible.new(Verse.last)
-    @bible.get
+    bible = Bible.new(params)
+    @bible = BibleProvider.new(bible.get)
   end
 
   def show
-    @bible = Bible.new(@verse)
-    @bible.get
+    bible = Bible.new(@verse)
+    @bible = BibleProvider.new(bible.get)
   end
 
   def new

@@ -1,0 +1,15 @@
+verses:
+  ✔ change url to /bible @done(2017-02-13 11:00) @project(verses)
+  ☐ find text by url /bible?genesis=1:1
+  ☐ clicking > will take you to next verse
+  ☐ meta keywords
+  ☐ add multiple translations
+  ☐ clicking on verse takes you to full chapter
+  ☐ update styling
+
+tickets:
+  ☐ need to update the ajax bad flash
+
+site needs:
+  ☐ update about pet project section
+  ☐ update index
