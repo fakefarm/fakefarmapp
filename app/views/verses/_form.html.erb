@@ -12,12 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :book %>
-    <%= f.text_field :book %>
-    <%= f.label :chapter %>
-    <%= f.text_field :chapter %>
-    <%= f.label :verse %>
-    <%= f.text_field :verse %>
+    <h2 class='h2'>Verse search</h2>
+    <%= f.text_field :book, placeholder: 'book' %>
+    <%= f.text_field :chapter, placeholder: 'chapter' %>
+    <%= f.text_field :verse, placeholder: 'verse' %>
     <%= f.submit 'search' %>
   </div>
 <% end %>
