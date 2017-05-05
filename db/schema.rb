@@ -15,44 +15,44 @@ ActiveRecord::Schema.define(version: 20170215113709) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "notes", force: :cascade do |t|
-    t.text     "body"
+  create_table "notes", id: :serial, force: :cascade do |t|
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "social_networks", force: :cascade do |t|
-    t.string   "handle"
-    t.string   "url"
-    t.string   "bio"
+  create_table "social_networks", id: :serial, force: :cascade do |t|
+    t.string "handle"
+    t.string "url"
+    t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "tickets", force: :cascade do |t|
-    t.string   "title"
-    t.string   "summary"
-    t.string   "ticket"
-    t.string   "merge"
-    t.date     "date_due"
-    t.date     "date_started"
-    t.date     "date_completed"
-    t.boolean  "started"
-    t.boolean  "trashed"
-    t.boolean  "paused"
-    t.boolean  "blocked"
-    t.boolean  "completed"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+  create_table "tickets", id: :serial, force: :cascade do |t|
+    t.string "title"
+    t.string "summary"
+    t.string "ticket"
+    t.string "merge"
+    t.date "date_due"
+    t.date "date_started"
+    t.date "date_completed"
+    t.boolean "started"
+    t.boolean "trashed"
+    t.boolean "paused"
+    t.boolean "blocked"
+    t.boolean "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "verses", force: :cascade do |t|
-    t.string   "book"
-    t.string   "chapter"
-    t.string   "verse"
-    t.string   "translation"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "verses", id: :serial, force: :cascade do |t|
+    t.string "book"
+    t.string "chapter"
+    t.string "verse"
+    t.string "translation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

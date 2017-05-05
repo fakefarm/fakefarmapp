@@ -1,2 +1,0 @@
-class SocialNetwork < ApplicationRecord
-end
