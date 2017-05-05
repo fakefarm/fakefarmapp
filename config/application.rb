@@ -16,8 +16,10 @@ module FakeFarmApp
       config.autoload_paths << "#{Rails.root}/app/dir"
     end
 
-		config.generators do |g|
-			g.javascript_engine :js
-		end
+    config.generators do |g|
+      g.stylesheets  false
+      g.javascripts  false
+      g.helper       false
+    end
   end
 end
