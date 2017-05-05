@@ -18,6 +18,7 @@ gem 'httparty'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'selenium-webdriver'
 end
 
 group :development do
