@@ -16,6 +16,7 @@ gem 'figaro'
 gem 'httparty'
 gem 'bcrypt'
 gem 'jasmine-rails'
+gem 'pundit'
 
 group :development, :test do
   gem 'pry-rails'
