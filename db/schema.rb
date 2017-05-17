@@ -15,20 +15,6 @@ ActiveRecord::Schema.define(version: 20170509142624) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "notes", id: :serial, force: :cascade do |t|
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "social_networks", id: :serial, force: :cascade do |t|
-    t.string "handle"
-    t.string "url"
-    t.string "bio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tags", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -36,35 +22,9 @@ ActiveRecord::Schema.define(version: 20170509142624) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tickets", id: :serial, force: :cascade do |t|
-    t.string "title"
-    t.string "summary"
-    t.string "ticket"
-    t.string "merge"
-    t.date "date_due"
-    t.date "date_started"
-    t.date "date_completed"
-    t.boolean "started"
-    t.boolean "trashed"
-    t.boolean "paused"
-    t.boolean "blocked"
-    t.boolean "completed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "verses", id: :serial, force: :cascade do |t|
-    t.string "book"
-    t.string "chapter"
-    t.string "verse"
-    t.string "translation"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
