@@ -15,9 +15,8 @@ describe UsersController do
 
   it "creates user" do
     expect {
-      post users_url, params: { user: { email: user.email, name: user.name } }
+      post users_url, params: { user: { email: users(:two).email + 'why', name: users(:two).name, password: 'password77' } }
     }.must_change "User.count"
-
     must_redirect_to user_path(User.last)
   end
 
@@ -32,7 +31,7 @@ describe UsersController do
   end
 
   it "updates user" do
-    patch user_url(user), params: { user: { email: user.email, name: user.name } }
+    patch user_url(user), params: { user: { email: user.email, name: user.name, password: 'is this working' } }
     must_redirect_to user_path(user)
   end
 

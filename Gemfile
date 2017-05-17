@@ -14,6 +14,7 @@ gem 'minitest-reporters'
 gem 'newrelic_rpm'
 gem 'figaro'
 gem 'httparty'
+gem 'bcrypt'
 
 
 group :development, :test do
