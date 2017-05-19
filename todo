@@ -1,9 +1,12 @@
 reading:
 ✔ https://www.railstutorial.org/book/_single-page#sec-a_hashed_password @done(2017-05-17 11:17)
-☐ https://www.railstutorial.org/book/_single-page#cha-sign_up
+✔ https://www.railstutorial.org/book/_single-page#cha-sign_up @done(2017-05-19 17:47)
+
+production & ssl:
+☐ https://www.railstutorial.org/book/sign_up#sec-ssl_in_production
 
 todo:
-  ☐ follow along rails tutorial for users setup.
+  ✔ follow along rails tutorial for users setup. @done(2017-05-19 17:47) @project(todo)
 
 postgres:
 
