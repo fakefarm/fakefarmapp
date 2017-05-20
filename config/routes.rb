@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :users
-  get 'signup' => 'users#new'
   resources :tags
-  root 'root#index'
+
+  get 'signup' => 'users#new'
+  get 'about'  => 'pages#about'
+  root 'pages#root'
 end
