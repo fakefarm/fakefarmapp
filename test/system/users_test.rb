@@ -1,29 +1,29 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class UsersTest < ApplicationSystemTestCase
-  test "visiting the index" do
+  test 'visiting the index' do
     visit users_url
-    assert_selector "h1", text: "User"
+    assert_selector 'h1', text: 'User'
   end
 
   describe 'New User signup flow' do
     test 'flow from root path to show page' do
       visit root_path
-      click_link 'join'
+      click_link 'Join'
       enter_and_sumbit_form_data
-      assert_selector "#notice", text: 'User was successfully created.'
+      assert_selector '.notice', text: 'User was successfully created.'
     end
 
     test 'content on the new user page' do
       visit new_user_path
-      assert_selector "h1", text: "Join the Farm!"
+      assert_selector 'h1', text: 'Join the Farm!'
     end
 
     test 'content on the show page after signing up' do
       visit new_user_path
       enter_and_sumbit_form_data
-      assert_selector "p", text: "don mattingly"
-      assert_selector "p", text: "don@mattingly.com"
+      assert_selector 'p', text: 'don mattingly'
+      assert_selector 'p', text: 'don@mattingly.com'
     end
   end
 
