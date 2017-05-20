@@ -13,6 +13,8 @@
 !/log/.keep
 !/tmp/.keep
 
+drafts/*
+
 # Ignore Byebug command history file.
 .byebug_history
 *.swp
