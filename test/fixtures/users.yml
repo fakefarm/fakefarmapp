@@ -4,6 +4,22 @@ one:
   email: dhh@loudthinking.com
   name: MyString
 
-two:
-  email: jason@basecamp.com
-  name: MyString
+oscar:
+  name: Oscar Woodall
+  email: oscar@woodalls.me
+  password_digest: <%= User.digest('password') %>
+
+wells:
+  name: Wells Woodall
+  email: wells@woodalls.me
+  password_digest: <%= User.digest('password') %>
+
+olivia:
+  name: Olivia Woodall
+  email: olivia@woodalls.me
+  password_digest: <%= User.digest('password') %>
+
+courage:
+  name: Courage Woodall
+  email: courage@woodalls.me
+  password_digest: <%= User.digest('password') %>

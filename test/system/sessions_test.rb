@@ -2,9 +2,7 @@ require 'application_system_test_case'
 
 class SessionsTest < ApplicationSystemTestCase
   setup do
-    # _dw TODO need to figure out how fixtures work.
-    # but we see that new didn't save for my test to see it.
-    @user = User.create(name: 'donny', email: 'don@mattingly.com', password: 'letmein')
+    @user = users(:courage)
   end
 
   test 'logging in' do
@@ -22,12 +20,11 @@ class SessionsTest < ApplicationSystemTestCase
   test 'proper links exist when logged in' do
     visit login_path
     fill_in 'Email', with: @user.email
-    fill_in 'Password', with: @user.password
+    fill_in 'Password', with: 'password'
     click_button 'Log in'
     assert_selector 'a', text: 'Profile'
     assert_selector 'a', text: 'Log out'
   end
-
 
   test 'logging in with bad credentials' do
     visit login_path
@@ -40,7 +37,7 @@ class SessionsTest < ApplicationSystemTestCase
   test 'logging in with right credentials' do
     visit login_path
     fill_in 'Email', with: @user.email
-    fill_in 'Password', with: @user.password
+    fill_in 'Password', with: 'password'
     click_button 'Log in'
     assert_selector '.notice', text: "Welcome back, #{@user.name}"
   end
@@ -48,7 +45,7 @@ class SessionsTest < ApplicationSystemTestCase
   test 'logging out' do
     visit login_path
     fill_in 'Email', with: @user.email
-    fill_in 'Password', with: @user.password
+    fill_in 'Password', with: 'password'
     click_button 'Log in'
     click_link 'Log out'
     assert_selector '.notice', text: 'You have successfully logged out.'
