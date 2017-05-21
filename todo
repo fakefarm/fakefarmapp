@@ -11,6 +11,13 @@ travis:
 why is this failing?
 ☐ https://travis-ci.org/fakefarm/fakefarmapp/builds
 
+frontend:
+  ☐ install yarn
+  ☐ install jasmine
+  ☐ backbone
+  ☐ jquery
+  ☐ underscore
+
 postgres:
   ☐ how to backup and restore?
 

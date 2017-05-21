@@ -1,41 +1,109 @@
-body { font-family: 'Crimson Text'; }
+/* FONTS */
 
-.h1 {
-  font-size: $font-base-3;
-  margin-bottom: $double-space;
-}
-.h2 {
-  font-size: $font-base-4;
-  margin-top: $double-space;
-  margin-bottom: $half-space;
+.serif {
+  font-family: var(--serif);
+  letter-spacing: 0px;  /* responsive */
 }
 
-.h3 {
-  font-size: $font-base-5;
-  margin-top: $double-space;
-  margin-bottom: $half-space;
+/* global margin and padding */
+
+.h1, .h2, .h3, .h4, .h5, .h6, .p,
+.p1, .p2, .p3, .p4 {
+  color: var(--gray);
+  margin:  calc(var(--space-root) * var(--space-0)) 0;
+  padding: calc(var(--space-root) * var(--space-0)) 0;
 }
 
-@media (min-width: $min-width) {
-  .h1 {
-    font-size: $font-base-1;
-    line-height: 110px;
-  }
-  .h2 {
-    margin-top: $single-space;
-    font-size: $font-base-3;
-  }
-  .h3 { font-size: $font-base-4; }
+/*
+  Responsive Typography.
+  Before adjusting these, look at the variables and adjust them there first so that it hits all 7 breakpoints.
+*/
+
+  .h1 { font-size: calc(var(--size-1) * var(--font-size-h1)); }
+  .h2 { font-size: calc(var(--size-1) * var(--font-size-h2)); }
+  .h3 { font-size: calc(var(--size-1) * var(--font-size-h3)); }
+  .h4 { font-size: calc(var(--size-1) * var(--font-size-h4)); }
+  .h5 { font-size: calc(var(--size-1) * var(--font-size-h5)); }
+  .h6 { font-size: calc(var(--size-1) * var(--font-size-h6)); }
+  .p,
+  .p1 { font-size: calc(var(--size-1) * var(--font-size-p)); }
+  .p2 { font-size: calc(var(--size-1) * var(--font-size-p)); }
+  .p3 { font-size: calc(var(--size-1) * var(--font-size-p)); }
+
+@media only screen and (min-width: 200px) {
+  .h1 { font-size: calc(var(--size-2) * var(--font-size-h1)); }
+  .h2 { font-size: calc(var(--size-2) * var(--font-size-h2)); }
+  .h3 { font-size: calc(var(--size-2) * var(--font-size-h3)); }
+  .h4 { font-size: calc(var(--size-2) * var(--font-size-h4)); }
+  .h5 { font-size: calc(var(--size-2) * var(--font-size-h5)); }
+  .h6 { font-size: calc(var(--size-2) * var(--font-size-h6)); }
+  .p,
+  .p1 { font-size: calc(var(--size-2) * var(--font-size-p)); }
+  .p2 { font-size: calc(var(--size-2) * var(--font-size-p)); }
+  .p3 { font-size: calc(var(--size-2) * var(--font-size-p)); }
 }
 
-i {
-  font-size: $font-base-4;
+@media only screen and (min-width: 400px) {
+  .h1 { font-size: calc(var(--size-4) * var(--font-size-h1)); }
+  .h2 { font-size: calc(var(--size-4) * var(--font-size-h2)); }
+  .h3 { font-size: calc(var(--size-4) * var(--font-size-h3)); }
+  .h4 { font-size: calc(var(--size-4) * var(--font-size-h4)); }
+  .h5 { font-size: calc(var(--size-4) * var(--font-size-h5)); }
+  .h6 { font-size: calc(var(--size-4) * var(--font-size-h6)); }
+  .p,
+  .p1 { font-size: calc(var(--size-4) * var(--font-size-p)); }
+  .p2 { font-size: calc(var(--size-4) * var(--font-size-p)); }
+  .p3 { font-size: calc(var(--size-4) * var(--font-size-p)); }
 }
 
-.center-text {
-  text-align: center;
+@media only screen and (min-width: 600px) {
+  .h1 { font-size: calc(var(--size-8) * var(--font-size-h1)); }
+  .h2 { font-size: calc(var(--size-8) * var(--font-size-h2)); }
+  .h3 { font-size: calc(var(--size-8) * var(--font-size-h3)); }
+  .h4 { font-size: calc(var(--size-8) * var(--font-size-h4)); }
+  .h5 { font-size: calc(var(--size-8) * var(--font-size-h5)); }
+  .h6 { font-size: calc(var(--size-8) * var(--font-size-h6)); }
+  .p,
+  .p1 { font-size: calc(var(--size-8) * var(--font-size-p)); }
+  .p2 { font-size: calc(var(--size-8) * var(--font-size-p)); }
+  .p3 { font-size: calc(var(--size-8) * var(--font-size-p)); }
 }
 
-.l-just {
-  text-align: left;
+@media only screen and (min-width: 800px) {
+  .h1 { font-size: calc(var(--size-9) * var(--font-size-h1)); }
+  .h2 { font-size: calc(var(--size-9) * var(--font-size-h2)); }
+  .h3 { font-size: calc(var(--size-9) * var(--font-size-h3)); }
+  .h4 { font-size: calc(var(--size-9) * var(--font-size-h4)); }
+  .h5 { font-size: calc(var(--size-9) * var(--font-size-h5)); }
+  .h6 { font-size: calc(var(--size-9) * var(--font-size-h6)); }
+  .p,
+  .p1 { font-size: calc(var(--size-9) * var(--font-size-p)); }
+  .p2 { font-size: calc(var(--size-9) * var(--font-size-p)); }
+  .p3 { font-size: calc(var(--size-9) * var(--font-size-p)); }
+}
+
+@media only screen and (min-width: 1000px) {
+  .h1 { font-size: calc(var(--size-10) * var(--font-size-h1)); }
+  .h2 { font-size: calc(var(--size-10) * var(--font-size-h2)); }
+  .h3 { font-size: calc(var(--size-10) * var(--font-size-h3)); }
+  .h4 { font-size: calc(var(--size-10) * var(--font-size-h4)); }
+  .h5 { font-size: calc(var(--size-10) * var(--font-size-h5)); }
+  .h6 { font-size: calc(var(--size-10) * var(--font-size-h6)); }
+  .p,
+  .p1 { font-size: calc(var(--size-10) * var(--font-size-p)); }
+  .p2 { font-size: calc(var(--size-10) * var(--font-size-p)); }
+  .p3 { font-size: calc(var(--size-10) * var(--font-size-p)); }
+}
+
+@media only screen and (min-width: 1200px) {
+  .h1 { font-size: calc(var(--size-11) * var(--font-size-h1)); }
+  .h2 { font-size: calc(var(--size-11) * var(--font-size-h2)); }
+  .h3 { font-size: calc(var(--size-11) * var(--font-size-h3)); }
+  .h4 { font-size: calc(var(--size-11) * var(--font-size-h4)); }
+  .h5 { font-size: calc(var(--size-11) * var(--font-size-h5)); }
+  .h6 { font-size: calc(var(--size-11) * var(--font-size-h6)); }
+  .p,
+  .p1 { font-size: calc(var(--size-11) * var(--font-size-p)); }
+  .p2 { font-size: calc(var(--size-11) * var(--font-size-p)); }
+  .p3 { font-size: calc(var(--size-11) * var(--font-size-p)); }
 }

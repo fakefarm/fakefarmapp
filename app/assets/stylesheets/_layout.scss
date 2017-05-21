@@ -27,3 +27,76 @@
     padding: $single-space $double-space;
   }
 }
+
+/* global margin and padding */
+
+.layout {
+  overflow-wrap: break-word;
+}
+
+.layout > * {
+  box-sizing: border-box;
+  margin:  calc(var(--space-root) * var(--space-0)) 0;
+  padding: calc(var(--space-root) * var(--space-0)) 0;
+}
+
+@media only screen and (min-width: 200px) {
+  .layout > * {
+    margin:  calc(var(--space-root) * var(--space-0)) 0;
+    padding: calc(var(--space-root) * var(--space-0)) 0;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .layout > * {
+    margin:  calc(var(--space-root) * var(--space-0)) 0;
+    padding: calc(var(--space-root) * var(--space-0)) 0;
+  }
+
+  .layout .article {
+    width:   calc(var(--col-two-thirds) * var(--col-width));
+    float: left;
+  }
+
+  .layout .aside {
+    float: right;
+    width:   calc(var(--col-third) * var(--col-width));
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .layout > * {
+    margin:  calc(var(--space-root) * var(--space-0)) 0;
+    padding: calc(var(--space-root) * var(--space-0)) 0;
+  }
+
+  .layout .footer {
+    overflow: auto;
+  }
+
+  .footer .col {
+    float: left;
+    width: calc(var(--col-third) * var(--col-width));
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .layout > * {
+    margin:  calc(var(--space-root) * var(--space-0)) 0;
+    padding: calc(var(--space-root) * var(--space-0)) 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .layout > * {
+    margin:  calc(var(--space-root) * var(--space-0)) 0;
+    padding: calc(var(--space-root) * var(--space-0)) 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .layout > * {
+    margin:  calc(var(--space-root) * var(--space-0)) 0;
+    padding: calc(var(--space-root) * var(--space-0)) 0;
+  }
+}
