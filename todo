@@ -8,8 +8,8 @@ later.. production & ssl:
   ☐ https://www.railstutorial.org/book/sign_up#sec-ssl_in_production
 
 travis:
-why is this failing?
-☐ https://travis-ci.org/fakefarm/fakefarmapp/builds
+  ☐ customize travis.yml file to run all the things
+  ☐ https://travis-ci.org/fakefarm/fakefarmapp/builds
 
 postgres:
   ☐ how to backup and restore?
