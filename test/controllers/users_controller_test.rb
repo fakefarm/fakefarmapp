@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe UsersController do
-  let(:user) { users :one }
+  let(:user) { users :oscar }
 
   it "gets index" do
     get users_url
@@ -15,7 +15,7 @@ describe UsersController do
 
   it "creates user" do
     expect {
-      post users_url, params: { user: { email: users(:two).email + 'why', name: users(:two).name, password: 'password77' } }
+      post users_url, params: { user: { email: 'dave@woodalls.me', name: 'dave', password: 'password' } }
     }.must_change "User.count"
     must_redirect_to user_path(User.last)
   end
