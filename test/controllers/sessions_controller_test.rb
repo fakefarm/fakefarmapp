@@ -5,5 +5,4 @@ describe SessionsController do
     get login_path
     value(response).must_be :success?
   end
-
 end
