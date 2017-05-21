@@ -21,13 +21,15 @@
   </head>
 
   <body>
+    <div class="l-container-center">
     <%= render partial: 'shared/header' %>
     <% if notice %>
       <div class="notice">
         <%= notice %>
       </div>
     <% end %>
-    <%= yield %>
+      <%= yield %>
+    </div>
     <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
