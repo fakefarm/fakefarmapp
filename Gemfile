@@ -16,10 +16,10 @@ gem 'figaro'
 gem 'httparty'
 gem 'bcrypt'
 
-
 group :development, :test do
   gem 'pry-rails'
   gem 'selenium-webdriver'
+  gem 'jasmine-rails'
 end
 
 group :development do

@@ -3,6 +3,7 @@
   <nav>
     <ul class='nav-links'>
       <li><%= link_to 'fake farm', root_path %></li>
+      <li><%= link_to 'specs', jasmine_rails_path %></li>
       <% if logged_in? %>
         <li>Hello, <%= current_user.name %></li>
         <li><%= link_to 'Log out', logout_path, method: :delete %></li>
