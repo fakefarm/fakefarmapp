@@ -15,11 +15,11 @@ gem 'newrelic_rpm'
 gem 'figaro'
 gem 'httparty'
 gem 'bcrypt'
+gem 'jasmine-rails'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'selenium-webdriver'
-  gem 'jasmine-rails'
 end
 
 group :development do
