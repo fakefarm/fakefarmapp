@@ -1,6 +1,6 @@
 fixtures:
-brandon's post
-  ☐ http://brandonhilkert.com/blog/7-reasons-why-im-sticking-with-minitest-and-fixtures-in-rails/
+read brandon's post
+☐ http://brandonhilkert.com/blog/7-reasons-why-im-sticking-with-minitest-and-fixtures-in-rails/
 
 production & ssl:
   ☐ https://www.railstutorial.org/book/sign_up#sec-ssl_in_production
@@ -11,10 +11,14 @@ travis:
 
 frontend:
   ☐ install jasmine
+  ☐ customize travis.yml file to run all the things
+  ☐ https://travis-ci.org/fakefarm/fakefarmapp/builds
 
 postgres:
   ☐ how to backup and restore?
 
+system testing:
+  ☐ need better coverage for advanced auth.
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
   ✔ install yarn @done(2017-05-22 19:59) @project(frontend)
