@@ -35,7 +35,7 @@ class ApplicationPolicy
   end
 
   def default
-    false
+    true
   end
 
   def scope

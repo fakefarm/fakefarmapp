@@ -2,18 +2,17 @@ require 'test_helper'
 
 class TagPolicyTest < ActiveSupport::TestCase
 
-  def test_scope
+  before do
+    @user = users(:oscar)
   end
 
-  def test_show
-  end
-
-  def test_create
-  end
-
-  def test_update
-  end
-
-  def test_destroy
+  describe "for an user" do
+    it { assert_permit @user, Tag, :index }
+    it { assert_permit @user, Tag, :new }
+    it { assert_permit @user, Tag, :show }
+    it { assert_permit @user, Tag, :create }
+    it { assert_permit @user, Tag, :edit }
+    it { assert_permit @user, Tag, :update }
+    it { assert_permit @user, Tag, :destroy }
   end
 end
