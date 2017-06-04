@@ -1,17 +1,4 @@
 <header>
-  <%= link_to (image_tag 'bird.svg', class: 'bird-header'), root_path %>
-  <nav>
-    <ul class='nav-links'>
-      <li><%= link_to 'fake farm', root_path %></li>
-      <li><%= link_to 'specs', jasmine_rails_path %></li>
-      <% if logged_in? %>
-        <li>Hello, <%= current_user.name %></li>
-        <li><%= link_to 'Log out', logout_path, method: :delete %></li>
-        <li><%= link_to 'Profile', current_user %></li>
-      <% else %>
-        <li><%= link_to 'Join', new_user_path %></li>
-        <li><%= link_to 'Log in', login_path %></li>
-      <% end %>
-    </ul>
-  </nav>
+  <%= render 'shared/logo_area' %>
+  <%= render 'shared/nav' %>
 </header>
