@@ -1,6 +1,11 @@
-fixtures:
-read brandon's post
-☐ http://brandonhilkert.com/blog/7-reasons-why-im-sticking-with-minitest-and-fixtures-in-rails/
+add-pundit-to-tags:
+  ☐ review the readme for next level of adding.
+  ☐ make policies work with users
+  ☐ make policies work with tags
+  ☐ make policies work with pages
+
+add-guard:
+  ☐ need to add guard for better TDD
 
 production & ssl:
   ☐ https://www.railstutorial.org/book/sign_up#sec-ssl_in_production
@@ -15,12 +20,22 @@ frontend:
   ☐ https://travis-ci.org/fakefarm/fakefarmapp/builds
 
 postgres:
-  ☐ how to backup and restore?
+  ☐ how to backup and restore? @important
+  ☐ switch to structure.sql
 
 system testing:
   ☐ need better coverage for advanced auth.
+
+install:
+  ☐ add breakman gem
+
+features:
+  ☐ image upload
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ add pundit tests to tags @done(2017-06-04 15:29) @project(add-pundit-to-tags)
+  ✔ http://brandonhilkert.com/blog/7-reasons-why-im-sticking-with-minitest-and-fixtures-in-rails/ @done(2017-05-24 15:11)
+  ✔ add pundit gem @done(2017-05-08 20:10) @project(add-pundit-to-tags)
   ✔ install yarn @done(2017-05-22 19:59) @project(frontend)
   ✔ backbone @done(2017-05-22 19:59) @project(frontend)
   ✔ jquery @done(2017-05-22 19:59) @project(frontend)
