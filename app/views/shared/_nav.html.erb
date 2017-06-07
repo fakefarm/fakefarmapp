@@ -1,6 +1,7 @@
 <nav class='main-nav'>
   <ul class='nav-links'>
     <li><%= link_to 'specs', jasmine_rails_path %></li>
+    <li><%= link_to 'style guide', '/assets/styleguide' %></li>
     <li><%= link_to 'about', about_path %></li>
     <% if logged_in? %>
       <li>Hello, <%= current_user.name %></li>

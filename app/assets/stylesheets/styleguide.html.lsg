@@ -1,0 +1,3 @@
+@scss application.scss
+@title Fake Farm Style Guide
+@import **/*.lsg

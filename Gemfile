@@ -17,6 +17,7 @@ gem 'httparty'
 gem 'bcrypt'
 gem 'jasmine-rails'
 gem 'pundit'
+gem 'livingstyleguide', '~> 2.0.1'
 
 group :development, :test do
   gem 'pry-rails'
