@@ -1,3 +1,6 @@
+livingstyleguide:
+  ☐ update gem path until upgrade
+
 add-pundit-to-tags:
   ☐ review the readme for next level of adding.
   ☐ make policies work with users
@@ -20,7 +23,7 @@ frontend:
   ☐ https://travis-ci.org/fakefarm/fakefarmapp/builds
 
 postgres:
-  ☐ how to backup and restore? @important
+  ✔ how to backup and restore? @important @done(2017-06-07 09:14) @project(postgres)
   ☐ switch to structure.sql
 
 system testing:
