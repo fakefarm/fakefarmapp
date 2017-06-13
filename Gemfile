@@ -18,6 +18,11 @@ gem 'bcrypt'
 gem 'jasmine-rails'
 gem 'pundit'
 gem 'livingstyleguide', '~> 2.0.2'
+gem 'shrine'
+gem 'aws-sdk'
+gem 'roda'
+gem 'jquery-fileupload-rails'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'pry-rails'
