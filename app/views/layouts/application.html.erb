@@ -1,47 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="description" content="Typically I rebuild my site once a year to practice what I've been learning. It's a way to experiment in my own place of the Internet. Thanks for stopping by!">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Everything begins with the creator" />
-		<meta property="og:description" content="Typically I rebuild my site once a year to practice what I've been learning. It's a way to experiment in my own place of the Internet. Thanks for stopping by!">
-    <meta name="keywords" content="dave woodall fake farm leavelist fakefarm" />
-    <meta name="author" content="dave woodall wwwoodall fake farm" />
-		<meta property="og:url" content="http://www.fakefarm.com">
-		<meta property="og:image" content="https://d13yacurqjgara.cloudfront.net/users/137644/screenshots/1628150/bird.jpg">
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,600|Open+Sans" rel="stylesheet">
-    <%= yield :stylesheets %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <% if content_for?(:head) %>
-      <%= yield :head %>
-    <% else %>
-      <title>Fake Farm | by Dave Woodall</title>
-    <% end %>
-  </head>
-
+  <%= render 'shared/layout/head' %>
   <body>
-    <div class="l-container-center">
-    <%= render partial: 'shared/header' %>
-    <% if notice %>
-      <div class="notice">
-        <%= notice %>
-      </div>
-    <% end %>
-      <%= yield %>
-    </div>
-    <%= debug(params) if Rails.env.development? %>
-    <!-- _dw make sure to update fakefarm UI- google number -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-40303853-1','auto');ga('send','pageview');
-      </script>
+    <%= render 'shared/layout/header' %>
+    <%= render 'shared/layout/flash' %>
+    <%= yield %>
+    <%= render 'shared/layout/scripts' %>
   </body>
 </html>

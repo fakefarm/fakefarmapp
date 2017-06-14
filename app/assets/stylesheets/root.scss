@@ -5,15 +5,16 @@
   line-height: $line-height-1;
 }
 
-@media (min-width: $min-width) {
-  .hot-tub {
-    background: url(https://d13yacurqjgara.cloudfront.net/users/137644/screenshots/1877532/hottub.png) no-repeat;
-    width: 800px;
-    height: 600px;
-    bottom: 0px;
-    z-index: -1;
-    position: relative;
+.hot-tub {
+  width: 80%;
+  margin: 0 auto;
+  img {
+    width: 100%;
   }
+}
+
+@media (min-width: $min-width) {
+
   .welcome-content {
     max-width: 40em;
     padding: $single-space;
